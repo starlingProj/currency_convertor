@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+body {
+  background-color: #f19756;
+}
+body {
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: auto;
+  background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
+
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+      transform: translateX(1);
+  }
+
+  25% {
+      transform: translateX(-25%);
+  }
+
+  50% {
+      transform: translateX(-50%);
+  }
+
+  75% {
+      transform: translateX(-25%);
+  }
+
+  100% {
+      transform: translateX(1);
+  }
+}
+* {
+  font-family: 'Inter', system-ui !important;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.App {
+  display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+  width: 1000px;
+  margin: 100px auto;
+  background-color: #dfe7b0;
+  padding: 100px;
+  box-shadow: 15px 10px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+}
+
+.block {
+margin: 20px;
+  input {
+    border: 5px solid rgba(206, 132, 20, 0.3);
+    font-size: 50px;
+    font-weight: bold;
+    padding: 10px 15px;
+    letter-spacing: 1.1px;
+    outline: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 100%;
+  }
+}
+
+.currencies {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 2px solid rgba(104, 68, 68, 0.1);
+  border-radius: 7px;
+  overflow: hidden;
+
+  li {
+    display: inline-flex;
+    padding: 20px 40px ;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    justify-content: center;
+    flex: 1;
+
+    &:hover {
+      background-color: rgba(255, 96, 4, 0.5);
+    }
+
+    &:active {
+      background-color: rgba(135, 16, 233, 0.5);
+    }
+
+    &.active {
+      background-color: rgba(135, 16, 233, 0.5);
+      color: #ffffff;
+    }
+
+    
+      
+    
+  }
+}
+.submit{
+  background-color: orange;
+  width: 400px;
+  padding: 19px ;
+  font-size: 16px;
+  font-style: to-upper-case;
+  margin: 30px;
+  border: 5px solid rgba(206, 132, 20, 0.3);
+  font-weight: bold;
+  cursor: pointer;
+    letter-spacing: 1.4px;
+    outline: none;
+   
+    border-radius: 5px;
+   
+}
